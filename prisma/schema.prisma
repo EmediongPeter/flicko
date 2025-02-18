@@ -25,4 +25,17 @@ model User {
     firstName    String?
     lastName     String?
     imageUrl     String?
+    
+    accounts Account[]
+}
+
+model Account {
+    id String @id @default(uuid())
+    
+    userId String
+    accessToken String @unique
+    emailAdress String
+    name String
+
+    user User @relation(fields: [userId], references: [id])
 }
