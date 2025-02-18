@@ -15,7 +15,7 @@ export const POST = async (req: NextRequest) => {
       update: { emailAddress, firstName, lastName, imageUrl },
       create: { id, emailAddress, firstName, lastName, imageUrl },
   })
-  console.log(await _)
+  console.log({logs: {ofLogs: await _}})
 
   // console.log(await db.user.findMany())
 
